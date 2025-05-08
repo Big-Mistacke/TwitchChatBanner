@@ -3,5 +3,6 @@
     "token": "oauth:TOKEN",
     "channel": "#CHANNEL",
     "cooldown": 900,
-    "probability": 100
+    "probability": 100,
+    "duration": 10
 }

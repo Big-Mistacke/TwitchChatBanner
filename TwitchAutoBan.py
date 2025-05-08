@@ -12,6 +12,7 @@ TOKEN = config["token"]
 CHANNEL = config["channel"]
 COOLDOWN = config["cooldown"]
 PROBABILITY = config["probability"]
+DURATION = config["duration"]
 
 class Bot(commands.Bot):
 
@@ -33,8 +34,8 @@ class Bot(commands.Bot):
 
 
         if (random.randint(1, PROBABILITY) == 1) and (now - self.last_timeout_time > self.cooldown_period):
-            await message.channel.send(f"/timeout {message.author.name} 2")
-            await message.channel.send(f"{message.author.name} has been banned (but not really since I'm not a mod)")
+            await message.channel.send(f"/timeout {message.author.name} {DURATION}")
+            await message.channel.send(f"{message.author.name} has been banished to the void!")
 
             print(f"Timed out {message.author.name}")
             self.last_timeout_time = now  # reset cooldown timer
