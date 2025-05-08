@@ -1,0 +1,7 @@
+{
+    "nickname": "NICKNAME",
+    "token": "oauth:TOKEN",
+    "channel": "#CHANNEL",
+    "cooldown": 900,
+    "probability": 100
+}
